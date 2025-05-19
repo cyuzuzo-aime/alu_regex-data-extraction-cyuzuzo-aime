@@ -1,6 +1,6 @@
-# Regex Scanner CLI
+# Web & Text REGEX Scanner
 
-A Node.js command-line tool to scan text or web content for common patterns using Regular Expressions.
+A Javascript command-line tool to scan text or web content for common patterns using Regular Expressions. It runs fully without a browser
 
 ## Supported Patterns
 
@@ -14,8 +14,7 @@ A Node.js command-line tool to scan text or web content for common patterns usin
 - Scan using test data from sample URLs
 - Paste your own text input
 - Provide a custom URL to fetch and scan
-- Graceful handling of invalid inputs
-- Output clearly indicates if nothing was found
+- Indication about what was & was not found
 
 ## Requirements
 
@@ -24,6 +23,8 @@ A Node.js command-line tool to scan text or web content for common patterns usin
 ## Usage
 
 ### 1. Run the script
+
+After cloning this repository, navigate inside folder "alu_regex-data-extraction-cyuzuzo-aime" and run:
 
     node scanner.js
 
@@ -40,9 +41,9 @@ You will be asked to select:
 
 Scans a randomly selected test URL from the built-in list:
 
-- https://www.uiowa.edu/~s007689/test.txt
-- https://www.cs.cmu.edu/~spok/grimmtmp/073.txt
-- https://people.sc.fsu.edu/~jburkardt/data/csv/addresses.csv
+- http://support.worldpay.com/support/CNP-API/content/appendbcredit.htm
+- https://www.google.com/search?q=212-456-7890+%28123%29+456-7890'
+- https://www.google.com/search?q=1234-5678-9012-3456
 
 The chosen link will be displayed before processing.
 
@@ -83,13 +84,3 @@ If nothing is found in a category:
 - **URL**: `\bhttps?:\/\/[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\/\S*)?\b`
 - **Phone**: `\b(\(\d{3}\)\s*|\d{3}[-.])\d{3}[-.]\d{4}\b`
 - **Credit Card**: `\b(?:\d{4}[- ]?){3}\d{4}\b`
-
-## Notes
-
-- Extendable to support hashtags, HTML tags, currency, and more
-- Uses only standard Node.js modules (no external dependencies)
-- Works fully in CLI without a browser
-
-## License
-
-MIT
